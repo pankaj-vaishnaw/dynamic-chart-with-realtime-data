@@ -43,7 +43,7 @@ const chartConfig = {
 // Initialize the chart
 chart = new Chart(ctx, chartConfig);
 
-// Function to add random data
+
 function addData() {
     const newData = Math.random() * 100; // Generate random data
     chart.data.labels.push(chart.data.labels.length);
@@ -51,10 +51,10 @@ function addData() {
     chart.update(); // Update the chart
 }
 
-// Add data at regular intervals (e.g., every 1 second)
+
 dataStreamInterval = setInterval(addData, 1000);
 
-// Button event listeners
+
 document.getElementById('startButton').addEventListener('click', () => {
     dataStreamInterval = setInterval(addData, 1000);
 });
